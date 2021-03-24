@@ -1,5 +1,7 @@
 <?php
 
+namespace Drawing\Shapes;
+
 abstract class Shape
 {
     protected int $x;
@@ -14,15 +16,15 @@ abstract class Shape
      * @param string $color
      * @param float $opacity
      */
-    public function __construct(int $x, int $y, string $color, float $opacity)
-    {
-        $this->x = $x;
-        $this->y = $y;
-        $this->color = $color;
-        $this->opacity = $opacity;
-    }
+    // public function __construct(int $x, int $y, string $color, float $opacity)
+    // {
+    //     $this->x = $x;
+    //     $this->y = $y;
+    //     $this->color = $color;
+    //     $this->opacity = $opacity;
+    // }
     
-    public abstract function draw(): string;
+    public abstract function draw(string $type): string;
 
     /**
      * @return int
